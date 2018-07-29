@@ -1,4 +1,4 @@
-package src
+package main
 
 import (
 	"time"
@@ -15,7 +15,7 @@ func main() {
 
 	lp := &LogProcess{
 		rc:    make(chan []byte),
-		wc:    make(chan string),
+		wc:    make(chan *Message),
 		read:  r,
 		write: w,
 	}
